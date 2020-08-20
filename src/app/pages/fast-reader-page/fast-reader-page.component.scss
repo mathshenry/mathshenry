@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixins";
+.outer-container {
+  @include flexbox(column);
+  @include align-items(center);
+  .example-full-width {
+    width: 60%;
+  }
+  .buttons-container{
+      @include flexbox;
+      @include align-items(center);
+  }
+  .word{
+      font-size: 3em;
+      padding: 8%;
+  }
+}

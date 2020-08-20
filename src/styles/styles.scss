@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "mixins";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $background-color;
+}
+
+.-clickable {
+  cursor: pointer;
+}
+
+input:focus,
+select:focus {
+  @include no-focus-border;
+  border-color: $accent-color;
+}
+
+.user-input {
+  width: 90%;
+  height: 55px;
+  margin-bottom: 20px;
+  border: 1px solid $primary-color;
+  border-radius: 15px;
+  box-shadow: $black-box-shadow;
+  text-indent: 20px;
+
+  &.-medium {
+    height: 45px;
+  }
+
+  &.-small {
+    height: 25px;
+  }
+}
+.-input-error {
+  border-color: red;
+}
+
+.component-title {
+  padding: 15px 0 0 20px;
+  color: $primary-color;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

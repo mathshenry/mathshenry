@@ -1,0 +1,37 @@
+<div class="outer-container">
+  <h1>Fast Reader</h1>
+  <div class="word">
+    {{ word }}
+  </div>
+
+  <mat-form-field class="example-full-width" (input)="changeText($event)">
+    <mat-label>Input your text here</mat-label>
+    <textarea
+      matInput
+      placeholder="Ex. Software developing is the most amazing thing in the world!"
+    ></textarea>
+  </mat-form-field>
+
+  <div>
+    <button mat-icon-button (click)="playPause(true)">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+    <button mat-icon-button (click)="playPause(false)">
+      <mat-icon>pause</mat-icon>
+    </button>
+    <button mat-icon-button (click)="replay()">
+      <mat-icon>replay</mat-icon>
+    </button>
+  </div>
+  <div class="buttons-container">
+    <button mat-icon-button (click)="changeWordsPerMinute(false)">
+      <mat-icon>remove</mat-icon>
+    </button>
+    <div matTooltip="Words per minute">
+      {{ wordsPerMinute | number }}
+    </div>
+    <button mat-icon-button (click)="changeWordsPerMinute(true)">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>
